@@ -108,12 +108,12 @@ body {
   flex-wrap: nowrap;
   align-items: stretch;
   border-radius: 12px;
-  margin: auto;
 }
 
 .carousel-item {
-  height: 120vw;
-  max-height: 500px;
+  height: 480px !important;
+  width: 100%;
+  object-fit: cover;
 }
 .carousel-item img {
   position: absolute;
