@@ -1,23 +1,7 @@
-@use "utilidades/variables" as *;
-@use "utilidades/mixin" as *;
-@use "utilidades/base" as *;
+@use 'variables';
+@use 'mixin' ;
+@use 'base' ;
 
-//componentes
-// Variables (importadas desde :root)
-$primary-color: #ffc444;
-$secondary-color: black;
-$accent-color: #e74c3c;
-$light-color: #fef9f3;
-$dark-color: #333;
-$gray-color: #95a5a6;
-
-$container-max-width: 600px;
-$spacing-large: 50px;
-$spacing-medium: 30px;
-$spacing-small: 20px;
-$border-radius: 8px;
-$shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-$font-size-small: 0.9rem;
 
 * {
   margin: 0;
@@ -57,7 +41,7 @@ body {
   margin-top: 5px;
 
   .menu-header {
-    background: linear-gradient(135deg, $primary-color, $primary-color);
+    background: linear-gradient(135deg, variables.$primary-color, variables.$primary-color);
     color: white;
     padding: 18px;
     text-align: center;
@@ -90,7 +74,7 @@ body {
     }
 
     h2 {
-      color: $primary-color;
+      color: variables.$primary-color;
       margin: 0 0 8px 0;
       font-size: 1.3em;
       font-weight: 600;
@@ -308,7 +292,7 @@ footer {
     position: relative;
 
     h1 {
-        color: $primary-color;
+        color: variables.$primary-color;
         font-size: 2.8em;
         margin-bottom: 10px;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
@@ -320,7 +304,7 @@ footer {
     }
 
     .tag {
-        background-color: $accent-color;
+        background-color: variables.$accent-color;
         color: white;
         padding: 5px 15px;
         border-radius: 12px;
@@ -359,7 +343,7 @@ footer {
         position: absolute;
         top: 15px;
         right: 15px;
-        background-color: $accent-color;
+        background-color: variables.$accent-color;
         color: white;
         padding: 5px 10px;
         border-radius: 5px;
@@ -372,14 +356,14 @@ footer {
         width: 100%;
         height: 200px;
         object-fit: cover;
-        border-bottom: 3px solid $primary-color;
+        border-bottom: 3px solid variables.$primary-color;
     }
 
     .promo-content {
         padding: 20px;
 
         .promo-title {
-            color: $secondary-color;
+            color: variables.$secondary-color;
             margin-top: 0;
             font-size: 1.5em;
             margin-bottom: 10px;
@@ -398,12 +382,12 @@ footer {
 
             .original-price {
                 text-decoration: line-through;
-                color: $gray-color;
+                color: variables.$gray-color;
                 margin-right: 10px;
             }
 
             .discount-price {
-                color: $accent-color;
+                color: variables.$accent-color;
                 font-weight: bold;
                 font-size: 1.4em;
             }
@@ -416,7 +400,7 @@ footer {
             margin-top: 15px;
 
             .add-to-cart {
-                background-color: $primary-color;
+                background-color: variables.$primary-color;
                 color: white;
                 border: none;
                 padding: 10px 20px;
@@ -429,12 +413,12 @@ footer {
                 gap: 8px;
 
                 &:hover {
-                    background-color: $secondary-color;
+                    background-color: variables.$secondary-color;
                 }
             }
 
             .promo-timer {
-                color: $accent-color;
+                color: variables.$accent-color;
                 font-weight: bold;
                 font-size: 0.9em;
             }
@@ -447,7 +431,7 @@ footer {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
     color: white;
     width: 60px;
     height: 60px;
@@ -469,7 +453,7 @@ footer {
         position: absolute;
         top: -5px;
         right: -5px;
-        background-color: $accent-color;
+        background-color: variables.$accent-color;
         color: white;
         width: 25px;
         height: 25px;
@@ -485,35 +469,35 @@ footer {
 
 // Estilos registro
 .register-container {
-  max-width: $container-max-width;
-  margin: $spacing-large auto;
-  padding: $spacing-medium;
+  max-width: variables.$container-max-width;
+  margin: variables.$spacing-large auto;
+  padding: variables.$spacing-medium;
   background-color: white;
-  border-radius: $border-radius;
-  box-shadow: $shadow;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$shadow;
 
   // Nested title
   .form-title {
     text-align: center;
-    margin-bottom: $spacing-medium;
+    margin-bottom: variables.$spacing-medium;
   }
 
   // Nested footer
   .form-footer {
     text-align: center;
-    margin-top: $spacing-small;
-    font-size: $font-size-small;
+    margin-top: variables.$spacing-small;
+    font-size: variables.$font-size-small;
   }
 }
 
 // Media Query(responsive adjustments)
 @media (max-width: 768px) {
   .register-container {
-    margin: $spacing-small auto;
-    padding: $spacing-small;
+    margin: variables.$spacing-small auto;
+    padding: variables.$spacing-small;
     
     .form-title {
-      margin-bottom: $spacing-small;
+      margin-bottom: variables.$spacing-small;
     }
   }
 }
