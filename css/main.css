@@ -125,6 +125,11 @@ body {
   object-position: center;
 }
 
+@media (max-width: 768px) {
+  .carrusel-item img {
+    max-width: 100%;
+  }
+}
 .action-card {
   background-color: black;
   border: none;

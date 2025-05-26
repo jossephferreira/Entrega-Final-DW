@@ -150,9 +150,12 @@ body {
    min-height: 80%;
    object-position: center;
   }
-
 }
-
+@media (max-width: 768px) {
+  .carrusel-item img {
+  max-width: 100%;
+  }
+}
 // CARDS
 .action-card {
   background-color: black;
