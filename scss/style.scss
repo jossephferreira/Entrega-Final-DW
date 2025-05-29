@@ -19,8 +19,7 @@ body {
   background: linear-gradient(135deg, 
     #fbc02d 0%,
     #ffd54f 50%,   
-    #fff176 100%
-  );
+    #fff176 100%);
   border-radius: 12px;
   &-brand img {
     height: 50px;
@@ -41,7 +40,10 @@ body {
   margin-top: 5px;
 
   .menu-header {
-    background: linear-gradient(135deg, variables.$primary-color, variables.$primary-color);
+  background: linear-gradient(135deg, 
+    #fff176 0%,
+    #ffd54f 50%,   
+    #fbc02d 100%);
     color: white;
     padding: 18px;
     text-align: center;
@@ -105,11 +107,11 @@ body {
 
 // BOTÓN PEDIR
 .btn-pedir {
-  background-color: black;
+  background-color: variables.$dark-color;
   border: none;
 
   &:hover {
-    background-color: #b88c0a;
+    background-color: variables.$primary-color;
   }
 }
 
@@ -123,16 +125,17 @@ body {
 }
 
 .carousel-item {
-    height:480px !important;
+    height:520px;
     width: 100%;
     object-fit: cover;
+    object-position: 0%;
   img {
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   min-width: 70%;
-   min-height: 70%;
+   min-width: 60%;
+   min-height: 60%;
    object-position: center;
   }
 }
@@ -142,7 +145,7 @@ body {
   }
   
   .carousel-item {
-    min-height: 200px;
+    min-height: 250px;
   }
   
   .carousel-item img {
@@ -176,7 +179,7 @@ body {
 
 // FOOTER
 footer {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
+  background: linear-gradient(135deg, v, #34495e);
   color: white;
   padding-top: 40px;
   border-radius: 12px;
@@ -188,7 +191,7 @@ footer {
 
   .footer-links {
     h5 {
-      color: #f39c12;
+      color: variables.$primary-color;
       margin-bottom: 20px;
       font-weight: 600;
     }
@@ -207,7 +210,7 @@ footer {
         transition: all 0.3s;
 
         &:hover {
-          color: #f39c12;
+          color: variables.$primary-color;
           padding-left: 5px;
         }
       }
@@ -221,7 +224,7 @@ footer {
     transition: all 0.3s;
 
     &:hover {
-      color: #f39c12;
+      color: variables.$primary-color;
       transform: translateY(-3px);
     }
   }
@@ -392,37 +395,37 @@ footer {
                 font-size: 1.4em;
             }
         }
+    }
+}
 
-        .promo-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
+.promo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
 
-            .add-to-cart {
-                background-color: variables.$primary-color;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-weight: bold;
-                transition: background-color 0.3s;
-                display: flex;
-                align-items: center;
-                gap: 8px;
+    .add-to-cart {
+        background-color: variables.$primary-color;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
 
-                &:hover {
-                    background-color: variables.$secondary-color;
-                }
-            }
-
-            .promo-timer {
-                color: variables.$accent-color;
-                font-weight: bold;
-                font-size: 0.9em;
-            }
+        &:hover {
+            background-color: variables.$secondary-color;
         }
+    }
+
+        .promo-timer {
+            color: variables.$accent-color;
+            font-weight: bold;
+            font-size: 0.9em;
     }
 }
 

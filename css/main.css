@@ -29,7 +29,7 @@ body {
   margin-top: 5px;
 }
 .menu-container .menu-header {
-  background: linear-gradient(135deg, #ffc444, #ffc444);
+  background: linear-gradient(135deg, #fff176 0%, #ffd54f 50%, #fbc02d 100%);
   color: white;
   padding: 18px;
   text-align: center;
@@ -82,11 +82,11 @@ body {
 }
 
 .btn-pedir {
-  background-color: black;
+  background-color: #333;
   border: none;
 }
 .btn-pedir:hover {
-  background-color: #b88c0a;
+  background-color: #ffc444;
 }
 
 .carousel-inner {
@@ -98,17 +98,18 @@ body {
 }
 
 .carousel-item {
-  height: 480px !important;
+  height: 520px;
   width: 100%;
   object-fit: cover;
+  object-position: 0%;
 }
 .carousel-item img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 70%;
-  min-height: 70%;
+  min-width: 60%;
+  min-height: 60%;
   object-position: center;
 }
 
@@ -117,7 +118,7 @@ body {
     border-radius: 8px;
   }
   .carousel-item {
-    min-height: 200px;
+    min-height: 250px;
   }
   .carousel-item img {
     border-radius: 8px;
@@ -147,7 +148,7 @@ body {
 }
 
 footer {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
+  background: linear-gradient(135deg, v, #34495e);
   color: white;
   padding-top: 40px;
   border-radius: 12px;
@@ -157,7 +158,7 @@ footer .footer-logo img {
   margin-bottom: 20px;
 }
 footer .footer-links h5 {
-  color: #f39c12;
+  color: #ffc444;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -174,7 +175,7 @@ footer .footer-links ul a {
   transition: all 0.3s;
 }
 footer .footer-links ul a:hover {
-  color: #f39c12;
+  color: #ffc444;
   padding-left: 5px;
 }
 footer .social-icons a {
@@ -184,7 +185,7 @@ footer .social-icons a {
   transition: all 0.3s;
 }
 footer .social-icons a:hover {
-  color: #f39c12;
+  color: #ffc444;
   transform: translateY(-3px);
 }
 footer .footer-bottom {
@@ -340,13 +341,14 @@ footer .footer-bottom {
   font-weight: bold;
   font-size: 1.4em;
 }
-.promo-card .promo-content .promo-footer {
+
+.promo-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
 }
-.promo-card .promo-content .promo-footer .add-to-cart {
+.promo-footer .add-to-cart {
   background-color: #ffc444;
   color: white;
   border: none;
@@ -359,10 +361,10 @@ footer .footer-bottom {
   align-items: center;
   gap: 8px;
 }
-.promo-card .promo-content .promo-footer .add-to-cart:hover {
+.promo-footer .add-to-cart:hover {
   background-color: black;
 }
-.promo-card .promo-content .promo-footer .promo-timer {
+.promo-footer .promo-timer {
   color: #e74c3c;
   font-weight: bold;
   font-size: 0.9em;
