@@ -11,7 +11,7 @@ body {
 
 .navbar {
   background: linear-gradient(135deg, #fbc02d 0%, #ffd54f 50%, #fff176 100%);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 .navbar-brand img {
   height: 50px;
@@ -48,7 +48,7 @@ body {
   transition: background-color 0.3s;
 }
 .menu-container .menu-item:hover {
-  background-color: #fffdf7;
+  background-color: #fef9f3;
 }
 .menu-container .menu-item:last-child {
   border-bottom: none;
@@ -66,7 +66,7 @@ body {
   margin: 0 0 10px 0;
   line-height: 1.4;
   font-size: 0.95em;
-  color: #555;
+  color: #95a5a6;
 }
 .menu-container .menu-item-img {
   width: 120px;
@@ -148,8 +148,8 @@ body {
 }
 
 footer {
-  background: linear-gradient(135deg, v, #34495e);
-  color: white;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #fef9f3;
   padding-top: 40px;
   border-radius: 12px;
 }
@@ -170,7 +170,7 @@ footer .footer-links ul li {
   margin-bottom: 10px;
 }
 footer .footer-links ul a {
-  color: #ecf0f1;
+  color: #fef9f3;
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -179,7 +179,7 @@ footer .footer-links ul a:hover {
   padding-left: 5px;
 }
 footer .social-icons a {
-  color: white;
+  color: #fef9f3;
   font-size: 20px;
   margin-right: 15px;
   transition: all 0.3s;
@@ -202,7 +202,7 @@ footer .footer-bottom {
   width: 60px;
   height: 60px;
   background-color: #25d366;
-  color: white;
+  color: #fef9f3;
   border-radius: 50%;
   text-align: center;
   font-size: 30px;
@@ -263,7 +263,7 @@ footer .footer-bottom {
 }
 .promo-header .tag {
   background-color: #e74c3c;
-  color: white;
+  color: #fef9f3;
   padding: 5px 15px;
   border-radius: 12px;
   font-weight: bold;
@@ -284,7 +284,7 @@ footer .footer-bottom {
 }
 
 .promo-card {
-  background-color: white;
+  background-color: #fef9f3;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -322,7 +322,7 @@ footer .footer-bottom {
   margin-bottom: 10px;
 }
 .promo-card .promo-content .promo-description {
-  color: #555;
+  color: #95a5a6;
   margin-bottom: 15px;
   line-height: 1.5;
 }
@@ -350,7 +350,7 @@ footer .footer-bottom {
 }
 .promo-footer .add-to-cart {
   background-color: #ffc444;
-  color: white;
+  color: #fef9f3;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -375,7 +375,7 @@ footer .footer-bottom {
   bottom: 30px;
   right: 30px;
   background-color: #ffc444;
-  color: white;
+  color: #fef9f3;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -396,7 +396,7 @@ footer .footer-bottom {
   top: -5px;
   right: -5px;
   background-color: #e74c3c;
-  color: white;
+  color: #fef9f3;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -411,7 +411,7 @@ footer .footer-bottom {
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
-  background-color: white;
+  background-color: #fef9f3;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
@@ -433,6 +433,39 @@ footer .footer-bottom {
   .register-container .form-title {
     margin-bottom: 20px;
   }
+}
+.nosotros-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/nosotros.jpg") center/cover no-repeat local;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .nosotros-banner {
+    min-height: 80vh;
+    background-attachment: scroll;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nosotros-banner {
+    min-height: 90vh;
+  }
+}
+.history-card {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /*# sourceMappingURL=main.css.map */

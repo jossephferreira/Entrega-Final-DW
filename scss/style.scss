@@ -2,7 +2,7 @@
 @use 'mixin' ;
 @use 'base' ;
 
-
+//Reset
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +14,10 @@ body {
   padding: 20px;
 }
 
-// MENÚ NAVEGACIÓN
+//Menu de Navegacion
 .navbar {
-  background: linear-gradient(135deg, 
-    #fbc02d 0%,
-    #ffd54f 50%,   
-    #fff176 100%);
-  border-radius: 12px;
+  background: variables.$background;
+  border-radius: variables.$border-radius;
   &-brand img {
     height: 50px;
   }
@@ -40,10 +37,7 @@ body {
   margin-top: 5px;
 
   .menu-header {
-  background: linear-gradient(135deg, 
-    #fff176 0%,
-    #ffd54f 50%,   
-    #fbc02d 100%);
+    background:variables.$background1;
     color: white;
     padding: 18px;
     text-align: center;
@@ -64,7 +58,7 @@ body {
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #fffdf7;
+      background-color: variables.$light-color;
     }
 
     &:last-child {
@@ -86,13 +80,13 @@ body {
       margin: 0 0 10px 0;
       line-height: 1.4;
       font-size: 0.95em;
-      color: #555;
+      color: variables.$gray-color;
     }
 
     &-img {
       width: 120px;
       height: 120px;
-      border-radius: 8px;
+      border-radius: variables.$border-radius-sm;
       object-fit: cover;
       border: 1px solid #eee;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -143,18 +137,18 @@ body {
   .carousel-inner {
     border-radius: 8px;
   }
-  
+
   .carousel-item {
     min-height: 250px;
   }
-  
+
   .carousel-item img {
     border-radius: 8px;
   }
 }
 // CARDS
 .action-card {
-  background-color: black;
+  background-color: variables.$secondary-color;
   border: none;
   border-radius: 15px;
   overflow: hidden;
@@ -179,8 +173,8 @@ body {
 
 // FOOTER
 footer {
-  background: linear-gradient(135deg, v, #34495e);
-  color: white;
+  background: variables.$background3;
+  color: variables.$light-color;
   padding-top: 40px;
   border-radius: 12px;
 
@@ -205,7 +199,7 @@ footer {
       }
 
       a {
-        color: #ecf0f1;
+        color: variables.$light-color;
         text-decoration: none;
         transition: all 0.3s;
 
@@ -218,7 +212,7 @@ footer {
   }
 
   .social-icons a {
-    color: white;
+    color: variables.$light-color;
     font-size: 20px;
     margin-right: 15px;
     transition: all 0.3s;
@@ -245,7 +239,7 @@ footer {
   width: 60px;
   height: 60px;
   background-color: #25d366;
-  color: white;
+  color: variables.$light-color;
   border-radius: 50%;
   text-align: center;
   font-size: 30px;
@@ -302,13 +296,13 @@ footer {
 
         @media (max-width: 768px) {
             font-size: 2.2em;
-      
+
         }
     }
 
     .tag {
         background-color: variables.$accent-color;
-        color: white;
+        color: variables.$light-color;
         padding: 5px 15px;
         border-radius: 12px;
         font-weight: bold;
@@ -331,7 +325,7 @@ footer {
 
 // Promo Card
 .promo-card {
-    background-color: white;
+    background-color: variables.$light-color;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -373,7 +367,7 @@ footer {
         }
 
         .promo-description {
-            color: #555;
+            color: variables.$gray-color;
             margin-bottom: 15px;
             line-height: 1.5;
         }
@@ -406,7 +400,7 @@ footer {
 
     .add-to-cart {
         background-color: variables.$primary-color;
-        color: white;
+        color: variables.$light-color;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
@@ -435,7 +429,7 @@ footer {
     bottom: 30px;
     right: 30px;
     background-color: variables.$primary-color;
-    color: white;
+    color: variables.$light-color;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -457,7 +451,7 @@ footer {
         top: -5px;
         right: -5px;
         background-color: variables.$accent-color;
-        color: white;
+        color: variables.$light-color;
         width: 25px;
         height: 25px;
         border-radius: 50%;
@@ -475,7 +469,7 @@ footer {
   max-width: variables.$container-max-width;
   margin: variables.$spacing-large auto;
   padding: variables.$spacing-medium;
-  background-color: white;
+  background-color: variables.$light-color;
   border-radius: variables.$border-radius;
   box-shadow: variables.$shadow;
 
@@ -498,9 +492,55 @@ footer {
   .register-container {
     margin: variables.$spacing-small auto;
     padding: variables.$spacing-small;
-    
+
     .form-title {
       margin-bottom: variables.$spacing-small;
     }
   }
 }
+//Estilos nosotros
+.nosotros-banner {
+    // Capa de color con opacidad sobre la imagen
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../img/nosotros.jpg') center/cover no-repeat local;
+    
+    // Dimensiones y disposición
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    // Efectos visuales
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+    
+    // Optimización de rendimiento
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+// Ajustes para móviles
+@media (max-width: 768px) {
+    .nosotros-banner {
+        min-height: 80vh;
+        background-attachment: scroll; //Mejor rendimiento en móviles
+    }
+}
+
+// Tablets en horizontal
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nosotros-banner {
+        min-height: 90vh;
+    }
+}
+.history-card {
+  background-color: rgba(0, 0, 0, 0.1); //Fondo semitransparente para las tarjetas 
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  }
